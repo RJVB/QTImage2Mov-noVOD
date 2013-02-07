@@ -1,0 +1,14 @@
+LIBRARY QTImage2Mov
+DESCRIPTION  'QTImage2Mov'
+
+EXPORTS
+;=============================================================================================
+;	Everyone has one
+
+	DllMain	@1
+
+;=============================================================================================
+;	Component Entry Points for 'thng' registered components
+
+	QTImage2MovImport_ComponentDispatch
+	QTImage2MovImportDirect_ComponentDispatch

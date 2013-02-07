@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<!-- askSave: proposer d'enregistrer le fichier importé-->
+<!-- autoSave: enregistrer automatiquement un 'movie' qui fait référence au fichier importé ("cache")-->
+<import askSave=True autoSave=False >
+	<description txt="ligne 1 (sans accents!)" lang="fr_FR" />
+	<description txt="ligne 2 (sans accents!)" lang="fr_FR" />
+	<!--
+	# src: nom de fichier, chemin local ou complet
+	# freq: fréquence d'enregistrement du fichier en Hz; -1 pour détermination automatique
+	# interval: interval d'importation des trames; -1 ou 1 pour toutes les trames
+	# starttime: si True, la 1e trame de la vidéo aura le temps du début de l'enregistrement d'origine.
+	# 		(comme une vidéo a par définition son début à t=0, il y aura un 'trou' avant la 1e trame)
+	#		à mettre sur False pour faire une exportation avec transcodage via QuickTime!
+	# channel: canal du quad (1 = haut-gauche, 4 = bas-droite) ou -1 pour l'image complète
+	# hflip: flip horizontal
+	# vmgi: pour un fichier VOD, si la structure VMGI doit être utilisée (défaut = True!)
+	#       cette structure est parfois erronée mais permet une lecture plus rapide du fichier.
+	# log: maintient un fichier journal (toto.VOD.log) du progres de lecture du fichier toto.VOD
+	# description: une description *SANS* accents!
+	# toutes paramètres sauf src sont optionnelles; en absence toutes les trames complètes sont importées a fréquence auto.
+	# les valeurs ci-dessous sont les valeurs par défaut: -->
+	<sequence src="tstVOD.VOD" freq=-1 interval=-1 channel=-1 starttime=True hflip=False vmgi=True log=False description="une description" />
+</import>

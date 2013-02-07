@@ -1,0 +1,23 @@
+20110125: Jump to chapter mark crashes QuickTime for specific TimeCode track data (7.6.6 (1756))
+Summary:
+A QuickTime movie containing 2 successive videos each with a TimeCode track and a chapter marker can cause QuickTime to crash when one jumps to the 2nd chapter marker.
+In this case, the 1st video track was recorded on 20100602 from 22:03:30;06 through 22:15:14;09; the second on  20101110 from 09:38:15;06 through 09:47:52;04 , both at 12.5Hz . Additional text tracks rendered below the Timecode rendering display the original recording times of the individual image frames. The TimeCode tracks were created with sufficient samples to ensure the closest possible match between the "TimeCode time" and the true time.
+
+Steps to Reproduce:
+On Mac OS X:
+1. open the enclosed video
+2. Use the popup menu in the MovieController bar (QuickTime Player 7) or the Chapters menu (QuickTime Player X) to jump to the 2nd chapter ("LaneSplitting.VOD").
+3. QuickTime beachballs and crashes.
+
+Expected Results:
+One would expect the movie to jump to the selected chapter, without crashing. Also, one would expect that the time display of the Movie Controller shows the same as the rendered TimeCode track display, i.e. the original recording times.
+
+Actual Results:
+QuickTime crashes. The crash occurs in the QuickTime engine, so all players are affected. If one prevents the crash (see below), the Movie Controller's time display is not correct in the 2nd chapter.
+
+Regression:
+This issue affects Mac OS X only; the same movie played on WinXP 32 (QT version 7.6.8) does not provoke crashing. There is a small rendering issue, however: the movie controller's time display shows "---N/A---" for the whole duration of the 2nd chapter.
+In QT Player 7 on Mac OS X, the crashing only occurs when the Movie Controller time display is set to "TimeCode: Drop-Frame", the initial setting when opening the movie. Selecting a different setting prevents the issue. The issue also does not occur when one plays or scrubs through to the 2nd chapter (video track). In this case, the time shown by the Movie Controller jumps from 22:15:14;07 to -24:29:38;59, which does not correspond to the recording time shown in the TimeCode and text tracks. If this indicates a time relative to the 1st chapter time, the offset is wrong (24:30 before 22:03 would be 21:33 of the previous day, i.e. 09:33 PM instead of AM).
+
+Notes:
+crasher.mov : the example movie where I first noticed the issue. Please note that this movie is not to be rendered public in order to protect the identies of the filmed persons.

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<import askSave=False autoSave=False >
+	<sequence src="tstVOD-full-unix.mov" freq=-1 channel=1 interval=-1 hflip=True />
+</import>

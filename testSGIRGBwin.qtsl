@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?quicktime type="application/x-quicktime-texml"?>
+<slideshow width="32" height="32" askSave=False >
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\1.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\2.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\3.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\4.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\5.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\6.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\7.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\8.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\a.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\b.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\c.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\d.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\e.rgb" mdur="33" />
+	<image src="..\QTSlideShowImporter.win\XML_files\flicker\f.rgb" mdur="33" />
+</slideshow>

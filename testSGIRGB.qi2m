@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<import askSave=True >
+	<sequence src="testSGIRGB.jpgs" hflip=True  />
+	<sequence src="testSGIRGB.jpgs" hflip=False  />
+	<sequence src="kkk.mov" hflip=True  />
+	<sequence src="kk.mov" hflip=False  />
+</import>

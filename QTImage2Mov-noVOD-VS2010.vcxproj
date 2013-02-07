@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Develop|Win32">
+      <Configuration>Develop</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>QTImage2Mov</ProjectName>
+    <ProjectGuid>{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">.\Develop\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">.\Develop\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</PostBuildEventUseInBuild>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/QTImage2Mov.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.\ComponentIncludes;C:\Program Files\QuickTime SDK\CIncludes;c:\Program Files\QuickTime SDK\RIncludes;c:\Program Files\QuickTime SDK\ComponentIncludes;.\Includes;.\PrefixIncludes;.\Resources;C:\Libs\SS_Log_bin;C:\Libs\libjpeg-turbo\include;..\brigade;.\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_FFMPEGLIBS_DEPEND;_SS_LOG_ACTIVE;IMPORT_JPGS;LOG_FRANCAIS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeaderOutputFile>.\Develop/QTImage2Mov.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Develop/</AssemblerListingLocation>
+      <ObjectFileName>.\Develop/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Develop/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>qtmlclient.lib;odbc32.lib;odbccp32.lib;Comctl32.lib;SS_Log.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Develop/QTImage2Mov.qtx</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\Program Files\QuickTime SDK\Libraries;C:\Libs\SS_Log_bin;C:\Libs\libjpeg-turbo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\QTImage2Mov.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <ImportLibrary>.\Develop/QTImage2Mov.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/QTImage2Mov.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>attrib -R $(OutDir)$(TargetName).qtx
+RezWack -d $(OutDir)$(TargetName).qtx -r     $(OutDir)$(TargetName).qtr -o $(OutDir)Temp$(TargetName).qtx
+attrib -R     $(OutDir)Temp$(TargetName).qtx
+attrib -R $(OutDir)$(TargetName).qtx
+del     $(OutDir)$(TargetName).qtx
+ren $(OutDir)Temp$(TargetName).qtx     $(TargetName).qtx
+copy /B /Y /V $(OutDir)$(TargetName).qtx $(SolutionDir)\$(TargetName)-dev.qtx</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/QTImage2Mov.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\ComponentIncludes;C:\Program Files\QuickTime SDK\CIncludes;c:\Program Files\QuickTime SDK\RIncludes;c:\Program Files\QuickTime SDK\ComponentIncludes;.\Includes;.\PrefixIncludes;.\Resources;C:\Libs\SS_Log_bin;C:\Libs\libjpeg-turbo\include;..\brigade;.\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_FFMPEGLIBS_DEPEND;_SS_LOG_ACTIVE;DEBUG;IMPORT_JPGS;LOG_FRANCAIS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeaderOutputFile>.\Debug/QTImage2Mov.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>qtmlclient.lib;odbc32.lib;odbccp32.lib;Comctl32.lib;SS_Log.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <OutputFile>Debug/QTImage2Mov.qtx</OutputFile>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\Program Files\QuickTime SDK\Libraries;C:\Libs\SS_Log_bin;C:\Libs\libjpeg-turbo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\QTImage2Mov.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/QTImage2Mov.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/QTImage2Mov.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>attrib -R $(OutDir)$(TargetName).qtx
+RezWack -d $(OutDir)$(TargetName).qtx -r     $(OutDir)$(TargetName).qtr -o $(OutDir)Temp$(TargetName).qtx
+attrib -R     $(OutDir)Temp$(TargetName).qtx
+attrib -R $(OutDir)$(TargetName).qtx
+del     $(OutDir)$(TargetName).qtx
+ren $(OutDir)Temp$(TargetName).qtx     $(TargetName).qtx
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/QTImage2Mov.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.\ComponentIncludes;C:\Program Files\QuickTime SDK\CIncludes;c:\Program Files\QuickTime SDK\RIncludes;c:\Program Files\QuickTime SDK\ComponentIncludes;.\Includes;.\PrefixIncludes;.\Resources;C:\Libs\SS_Log_bin;C:\Libs\libjpeg-turbo\include;..\brigade;.\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_FFMPEGLIBS_DEPEND;IMPORT_JPGS;LOG_FRANCAIS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeaderOutputFile>.\Release/QTImage2Mov.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>qtmlclient.lib;odbc32.lib;odbccp32.lib;Comctl32.lib;SS_Log.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>LinkVerboseLib</ShowProgress>
+      <OutputFile>Release/QTImage2Mov.qtx</OutputFile>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>C:\Program Files\QuickTime SDK\Libraries;C:\Libs\SS_Log_bin;C:\Libs\libjpeg-turbo\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\QTImage2Mov.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Release/QTImage2Mov.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/QTImage2Mov.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>attrib -R $(OutDir)$(TargetName).qtx
+RezWack -d $(OutDir)$(TargetName).qtx -r     $(OutDir)$(TargetName).qtr -o $(OutDir)Temp$(TargetName).qtx
+attrib -R     $(OutDir)Temp$(TargetName).qtx
+attrib -R $(OutDir)$(TargetName).qtx
+del     $(OutDir)$(TargetName).qtx
+ren $(OutDir)Temp$(TargetName).qtx     $(TargetName).qtx
+copy /B /Y /V $(OutDir)$(TargetName).qtx $(SolutionDir)$(TargetName).qtx</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\brigade\win32getpath.c" />
+    <ClCompile Include="..\brigade\win32popen.c" />
+    <ClCompile Include="source\AddImageFrames.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">false</PreprocessToFile>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">false</PreprocessKeepComments>
+    </ClCompile>
+    <ClCompile Include="source\Dllmain.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="source\IMGFrameFromJPGS.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="source\Logger.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="source\QTils.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="source\QTImage2Mov-direct.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="source\QTImage2Mov.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="source\timing.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QTImage2Mov.def" />
+    <None Include="source\QTImage2Mov.r">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">true</ExcludedFromBuild>
+    </None>
+    <CustomBuild Include="QTImage2MovWin.r">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rez.exe -p -i "C:\Program Files\QuickTime SDK\RIncludes"  -i .\Includes -i .\Resources -i .\source -i .\ComponentIncludes  -i .\PrefixIncludes -o "$(TargetDir)$(TargetName).qtr" &lt;  "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(TargetDir)$(TargetName).qtr;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">Rez.exe -p -i "C:\Program Files\QuickTime SDK\RIncludes"  -i .\Includes -i .\Resources -i .\source -i .\ComponentIncludes  -i .\PrefixIncludes -o "$(TargetDir)$(TargetName).qtr" &lt;  "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Develop|Win32'">$(TargetDir)$(TargetName).qtr;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rez.exe -p -i "C:\Program Files\QuickTime SDK\RIncludes"  -i .\Includes -i .\Resources -i .\source -i .\ComponentIncludes  -i .\PrefixIncludes -o "$(TargetDir)$(TargetName).qtr" &lt;  "%(FullPath)"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(TargetDir)$(TargetName).qtr;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="TODOHIST.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\brigade\_stdint_.h" />
+    <ClInclude Include="source\AddImageFrames.h" />
+    <ClInclude Include="source\copyright.h" />
+    <ClInclude Include="source\Dllmain.h" />
+    <ClInclude Include="source\IMGFrameFromJPGS.h" />
+    <ClInclude Include="source\Logger.h" />
+    <ClInclude Include="source\Logging.h" />
+    <ClInclude Include="source\QTils.h" />
+    <ClInclude Include="source\QTImage2Mov.h" />
+    <ClInclude Include="source\QTImage2MovVersion.h" />
+    <ClInclude Include="ComponentIncludes\QuickTimeComponents.h" />
+    <ClInclude Include="source\timing.h" />
+    <ClInclude Include="source\winixdefs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="source\QI2Mversion.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

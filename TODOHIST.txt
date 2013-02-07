@@ -1,0 +1,117 @@
+* 20100727
+*	Check why a second added track (non flipped) imposes a lateral offset on the 1st/preceding (flipped) track. Something to do with the matrix operation I outcommented today?
+	>> No, simply because the flip via a ScaleMatrix introduced a translation over -trackWidth
+*	Check why a 3rd track gets appended to the 2nd track (both being .mov sequence entries).
+	>> because of using InsertMovieSegment(), which doesn't always add new tracks to hold the copied tracks.
+*	.jpgs and .vod tracks all start at t=0
+	>> InsertMediaIntoTrack() should insert at trackStart=*theTime instead of -1 (meaning 0 for a new track)
+
+* 20100816
+*	Implemented autoSave, an option that allows to make a reference movie automatically.
+
+* 20100817
+*	Implement a 'description' tag, functioning on the movie level. Done.
+
+* 20100902
+*	!! See if it's possible to let a movie's time begin at a non-zero value, i.e. a recording's start daytime!!
+	*Done*. Feature active by default and when the sequence attribute starttime is True; inactive for direct
+	import of a VOD. QT movies always start at t=0, so there's inevitably an empty period, a single frame of
+	the subsequent duration. The importer thus defines a MoviePoster at the recording start time, and sets
+	the movie time.
+
+* 20100906:
+*	It turns out that VOD files can contain frames (images) from preceding recordings, and not just at the end and without reference in the VMGI's VOB_Des array. I have one recording where at least 1 VMGI *starts* with a few images that were recorded a month before, and those images are thus referenced in the VOB_Des array.
+>	It is easy to filter out such images by comparing their timestamp to the begin and end timestamps recorded in the VMGI, but audio records do not have such information and this is probably the reason why HDDViewer produces 'clicks' at regular intervals.
+
+*20100913:
+*	Implemented a logging facility. This generates a logfile toto.VOD.log when reading from toto.VOD .
+
+*20100914:
+*	VMGI headers seem to be located at a fixed, 2Mb interval. Find_Next_VMGI() now makes use of this observation to attempt to find the next VMGI at 1) 2Mb from the current VMGI or 2) the next 2Mb interval taken from the current file position. If those fail, a byte-for-byte scan is launched, as before.
+	This speeds up parsing using the VMGI position; it is now faster than the non-VMGI brute-force approach.
+
+*20100927:
+*	Implemented more intelligent caching than what the stdio FILE routines are apparently capable of. Enormous import-speed improvement.
+
+*20100929:
+*	Implemented a (simple!) progress dialog for Win32.
+
+*20101008:
+*	Another enormous import speed improvement by minimising the number of calls to feof() and ferror() !
+
+*20101012:
+*	Add_imgFrames_From_File() now adds a TimeCode track to each track it imports. The TimeCode is not based directly on the individual timestamps in the VOD file, but rather extrapolates time from the recording start time, using the number of imported frames, the imported duration and the specified frequency. There will thus only be a perfect match in very rare cases.
+
+*20101017:
+*	All TimeCode information now resides in the movie; a foo.VOD.tc file is no longer necessary thanks to the creation of a 'dref atom' in the movie.
+
+*20101116:
+*	Updated the TimeCode track handling such that reuse is supported when importing multiple instances of the
+	same source file (e.g. different views on/channels from the same recording). Importing subsequent files
+	without time padding now also gives proper TimeCode tracks.
+
+*20101118:
+*	Extended the MetaData handling (generation and importing), which was implemented only for jpgs and VOD import. All imported elements now get an OriginalSource tag and at least an Info tag containing duration and frequency indication (if possible). Supported MetaData that is present in imported movies is also copied over in all cases.
+*	On MSWindows, QuickTime somehow makes a 2nd attempt if an import returns an error. It isn't exactly nice to ask the user twice if he wants to cancel the import if he says yes the 1st time, so we'll have to remember the last file and error type that occurred. Of course this means that if user tries to import the same file another time, without correction, without quitting QuickTime or importing another file first, the import will be aborted when we encounter the error, without further querying. This is done via a pair of static variables in BuildMovie().
+
+*20101122:
+*	To build the SS_Log functionality (logger.cpp), Microsoft Visual Studio [Express] settings in the "Configuration Properties/General Settings" tab must be  "Character Set: Not set" or "Character Set: Use Multi-Byte Character set". Selecting Unicode will generate linker errors.
+
+// pending!
+//*20101126:
+//*	the autoSave setting now returns the newly saved reference movie to QuickTime. For this, import is no longer
+//	done directly into the movie container received from QuickTime, but into a temporary movie. This movie is
+//	inserted into the final destination movie at the end of the import process, using InsertMovieSegment().
+//	(This could become a selectable behaviour.)
+
+*20101210:
+*	Implemented support for (http) streamed content. Required just a detection at the level of the input URL string (starts with http:// -> isHTTP ...) and a calling QTNewDataReferenceFromURLCFString() instead of QTNewDataReferenceFromFullPathCFString(). More of a gadget than anything else, as streamed content with a TimeCode track can crash QuickTime when we return it as loaded too early. Should wait until at least LoadState == PlayThroughOK?
+
+*20101217:
+*	Find a way to re-visualise the TimeCode track when importing one of the 4 supported channels from a ".vod.mov" with TC track!
+	(solved)
+
+*20110106:
+*	Importing a sequence src="toto.VOD" or "toto.JPGS" from a .QI2M file in the root of a disk now also works on MS Windows. Stupid _chdir() command requires a trailing backslash to change into the root of a disk...
+
+*20110107:
+*	Non-integer frameRates are an issue for the TimeCode implementation which is the only way I know to handle absolute (wallclock) time. Introducing a factor between movie framerate and TC framerate alleviates this issue; the factor (TCSCALE) is currently fixed to 2 so that rates like 12.5Hz give a properly behaving TimeCode track.
+
+*20110109
+*	Bar that last 'wisdom'. The way to deal with non-integer frameRates appears to be to set the TimeCode rate to the (next-higher) integer value. More officially, to ensure that the fTimeScale/frameDuration fraction corresponds to the real rate, though in practice I get more veridical time control using the same integer rate throughout. To ensure that the requested frequency is actually obtained, the Movie timescale is now set to 1000*frequency if still unset when the first VOD file is read.
+
+*20110118
+*	Progress dialog for Mac OS X. A YesNoDialog is still missing.
+
+*20110125
+*	Final improvement of TimeCode track accuracy, now at most 1 frame difference with the true recording time. Obtained by starting a new TC sample (segment) for each VMGI.
+*	Implemented support for chapters.
+
+*20110203
+*	Discovered the existence of VMGI headers with a VOBX tags (instead of VOBS). My sole example of this case has VOB_Ns==0, i.e. no VOBS_JPEG or VOBS_Audio frames, and precedes a large, final chunk of emptyness in the file in question. We will assume this VOBX case signals the end of a recording (verified with the recording content: one sees the subject reach to switch off the system).
+*	It appears the VOD files also contain 1) Exif information and 2) GPRMC (GPS NMEA tags: http://aprs.gids.nl/nmea/#rmc) headers. The $GPRMC tag is at byte 146 from the jpeg section onset (the Exif header is at byte 16).
+
+*20110304
+*	the culprit for a long-standing mysterious failure of adding the TC media
+	to its track: a round error causing the obtained duration to be very slightly shorter
+	(1 or 2 TimeValues) from the calculated duration. Telling InsertMediaIntoTrack to use
+	the real, total duration (instead of something ever so slightly too long) is the solution...
+	I should have used from the onset!
+
+*20110517
+*	First appearance of a VOD file that doesn't have a valid VMGI at byte 0 but after ... 8Mb only. Added support for this kind of situation through additional calls to a refined version of Find_Next_VMGI().
+	Also updated QTVODm2 to enable it to import VOD files without using the VMGI structure.
+
+*20111124
+*	A locking bug exists currently in TimeMachine on Mac OS X 10.7 that renders open files inaccessible. I
+	added a workaround that excludes files from the Core Backup Service while we have them open. (Untested on
+	10.7 but transparent on 10.6 .)
+
+*20121107
+*	MP4 VOD file support. Currently semi-functional using a repackaging step with ffmpeg, and full import into the destination movie (as opposed to import by reference).
+	Average framerate determined in a similar fashion, using ffmpeg and ffprobe. Result of that operation seems
+	to be ignored?!
+
+*20121124
+*	Improved handling of user interrupt during lengthy, exhaustive VOD file scanning
+	timeStamp track is enabled by default for VOD imports; TimeCode track set to height 1.

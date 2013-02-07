@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<import askSave=False autoSave=True >
+	<sequence src="http://trailers.apple.com/movies/paramount/star_trek/startrek-clip_h720p.mov" />
+</import>

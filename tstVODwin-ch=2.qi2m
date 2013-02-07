@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<slideshow askSave=True >
+	# estimated frequency is about 13Hz; force it to 15Hz; saves some time scanning the first VMGI
+	<sequence src="..\brigade\F0009001.VOD" freq=15 channel=2 hflip=False />
+</slideshow>
+
+trak
+û+cœ@
+@
+H@
+ä@
+@
+
+quadrant #1 h-flipped
+

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<import askSave=False autoSave=True >
+	<description txt="line 1, en" lang="en_GB" />
+	<description txt="line 2, fr" lang="fr_FR" />
+	<sequence src="../brigade/F0009001.VOD" freq=-1 channel=-1 interval=-1 hflip=False
+		description="trackDescr" />
+</import>

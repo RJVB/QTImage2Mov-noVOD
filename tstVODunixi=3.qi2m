@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<?quicktime type="video/x-qt-img2mov"?>
+<slideshow askSave=True >
+	<sequence src="../brigade/F0009001.VOD" freq=-1 channel=1 interval=3 hflip=True />
+</slideshow>

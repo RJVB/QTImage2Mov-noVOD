@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QTImage2Mov", "QTImage2Mov-noVOD-VS2010.vcxproj", "{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DocSet", "DocSet.vcxproj", "{4B9FF142-A59B-42B7-A79B-3A667F8A30A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Develop|Win32 = Develop|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}.Debug|Win32.Build.0 = Debug|Win32
+		{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}.Develop|Win32.ActiveCfg = Develop|Win32
+		{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}.Develop|Win32.Build.0 = Develop|Win32
+		{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}.Release|Win32.ActiveCfg = Release|Win32
+		{DDA2E5D0-26E7-45E3-9FE0-50F2AECDC100}.Release|Win32.Build.0 = Release|Win32
+		{4B9FF142-A59B-42B7-A79B-3A667F8A30A1}.Debug|Win32.ActiveCfg = Release|Win32
+		{4B9FF142-A59B-42B7-A79B-3A667F8A30A1}.Develop|Win32.ActiveCfg = Develop|Win32
+		{4B9FF142-A59B-42B7-A79B-3A667F8A30A1}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
