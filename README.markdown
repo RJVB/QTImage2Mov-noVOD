@@ -2,10 +2,10 @@
 -
 **version 1.20**
 
-    QTImage2Mov is an importer component for XML containers listing import commands, as well as
-    for a very simple image stream container format (JPGS) and a proprietary video format (VOD).
-    The XML container format allows to specify one or multiple import files as well as to configure the import procedure (e.g. mask quadrants or flip) and add chapters or other metadata.
-    Note that this repository does NOT contain the VOD import code which cannot at this time be made public.
+QTImage2Mov is an importer component for XML containers listing import commands, as well as
+for a very simple image stream container format (JPGS) and a proprietary video format (VOD).
+The XML container format allows to specify one or multiple import files as well as to configure the import procedure (e.g. mask quadrants or flip) and add chapters or other metadata.
+Note that this repository does NOT contain the VOD import code which cannot at this time be made public.
 
 QTImage2Mov est un plug-in pour le "noyau audio-visuel" QuickTime® ("Importer Component" dans le jargon d'Apple) qui permet d'importer certains types de fichiers — notamment des fichiers .VOD enregistrés sur les enregistreurs Brigade — et d'en faire des vidéos QuickTime. Cette approche a l'intérêt que, sans effort supplémentaire, les fichiers .VOD ainsi que les vidéos résultantes s'ouvrent avec le lecteur QuickTime ou tout autre application faisant appel à QuickTime, mise à part du fait que QuickTime fournit gratuitement une multitude de fonctionnalités multimédia.
 
@@ -27,9 +27,9 @@ L'importation donne lieu à un objet en mémoire vive (un *Movie*) qui représen
 
 \<sequence src="tstVOD.VOD" freq=-1 interval=-1 maxframes=-1
 
-	channel=-1 starttime=True  hidetc=False hidets=False timepad=False
+channel=-1 starttime=True  hidetc=False hidets=False timepad=False
 
-	transH=0 transV=0 relTransH=0 relTransV=0 hflip=False  vmgi=True log=False description="une description"  asmovie=False newchapter=True /\>
+transH=0 transV=0 relTransH=0 relTransV=0 hflip=False  vmgi=True log=False description="une description"  asmovie=False newchapter=True /\>
 
 \</import\>
 
