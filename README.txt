@@ -9,4 +9,4 @@ Note that this repository does NOT contain the VOD import code which cannot at t
 public.
 
 French documentation:
-https://github.com/RJVB/QTImage2Mov-noVOD/blob/master/QTImage2Mov-v1.2.rtf
+https://github.com/RJVB/QTImage2Mov-noVOD/blob/master/QTImage2Mov-v1.2.html
