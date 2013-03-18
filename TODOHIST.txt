@@ -115,3 +115,6 @@
 *20121124
 *	Improved handling of user interrupt during lengthy, exhaustive VOD file scanning
 	timeStamp track is enabled by default for VOD imports; TimeCode track set to height 1.
+
+*20130312
+*	Now uses NSLogger for log messages instead of (my own) PCLogController ...

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
+	<string>en_GB</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -109,7 +109,7 @@
 	<key>CFBundlePackageType</key>
 	<string>thng</string>
 	<key>CFBundleShortVersionString</key>
-	<string></string>
+	<string>2.00</string>
 	<key>CFBundleSignature</key>
 	<string>RJVB</string>
 	<key>CFBundleVersion</key>

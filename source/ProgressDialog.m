@@ -312,15 +312,15 @@ ProgressDialogs *CloseProgressDialog(ProgressDialogs *PD)
 		/* @synchronized(PD->dialog) */{
 			[PD->dialog setProgressTimer:nil];
 			PD->dialog->parent = NULL;
-//			[[PD->dialog progressPanel] close];
 			// clanganalyser says "Incorrect decrement of the reference count of an object that is not owned at this point by the caller"
 			// but if we don't do the release, the progress dialog remains open
-			[[PD->dialog progressPanel] release];
+			[[PD->dialog progressPanel] close];
+//			[[PD->dialog progressPanel] release];
 //			[NSApp endSheet:[PD->dialog progressPanel]];
 			// is this kosher?? (Answer: no...)
-			if( [PD->dialog progressPanel] ){
-				[[PD->dialog autoReleasePool] drain];
-			}
+//			if( [PD->dialog progressPanel] ){
+//				[[PD->dialog autoReleasePool] drain];
+//			}
 			[PD->dialog autorelease];
 		}
 		free(PD);

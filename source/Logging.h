@@ -27,23 +27,25 @@ extern "C" {
 }
 #	endif
 #else
+#	include <libgen.h>
 #	ifdef _PC_LOG_ACTIVE
 #		ifndef _PC_LOG_EMBEDDED
 #			include <LogController/PCLogController.h>
 #		else
 #			include "PCLogController.h"
 #		endif
-#		include <libgen.h>
 //#		define	Log		fprintf
 //#		define	qtLogPtr	stderr
-		extern int PCLogStatus( id, const char*, int, NSString*, ... );
+		extern int PCLogStatusWithCFormat( id, const char*, int, char*, ... );
 		extern BOOL PCLogActive();
 		extern void *qtLogName();
 //		extern void *nsString(char *s);
-#		define	Log(d,f,...)	PCLogStatus((d),basename(__FILE__),__LINE__,nsString((char*)(f)), ##__VA_ARGS__)
+#		define	Log(d,f,...)	PCLogStatusWithCFormat((d),basename(__FILE__),__LINE__,((char*)(f)), ##__VA_ARGS__)
 #		define	qtLogPtr		qtLogName()
 #	else
-#		define	Log(d,f,...)	/**/
+#		include "NSLoggerClient.h"
+#		define	Log(d,f,...)	NSLogprintf(basename(__FILE__),__LINE__,__FUNCTION__,1,\
+								(f), ##__VA_ARGS__)
 #		define	qtLogPtr		/**/
 #	endif
 #endif

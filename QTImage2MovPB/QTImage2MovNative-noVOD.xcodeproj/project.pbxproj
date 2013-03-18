@@ -51,8 +51,13 @@
 		D60437591292A2A0002FD822 /* type_traits.h in Headers */ = {isa = PBXBuildFile; fileRef = D60437541292A2A0002FD822 /* type_traits.h */; };
 		D61A798211F9E9A000CB755D /* QTImage2Mov-direct.c in Sources */ = {isa = PBXBuildFile; fileRef = D66B26BD11F86C1100E8AE78 /* QTImage2Mov-direct.c */; };
 		D625A43212957C0F002C044E /* TODOHIST.txt in Resources */ = {isa = PBXBuildFile; fileRef = D644ABC311FFA0820097BA7E /* TODOHIST.txt */; };
-		D633F4AC1693667000203C5E /* PCLogController.h in Headers */ = {isa = PBXBuildFile; fileRef = D633F4AB1693667000203C5E /* PCLogController.h */; };
-		D633F4AD1693667000203C5E /* PCLogController.h in Headers */ = {isa = PBXBuildFile; fileRef = D633F4AB1693667000203C5E /* PCLogController.h */; };
+		D63C533316F773E200A41AA7 /* NSLogger-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D63C532D16F773E200A41AA7 /* NSLogger-LICENSE.txt */; };
+		D63C533416F773E200A41AA7 /* LoggerCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = D63C532E16F773E200A41AA7 /* LoggerCommon.h */; };
+		D63C533516F773E200A41AA7 /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D63C532F16F773E200A41AA7 /* LoggerClient.m */; };
+		D63C533616F773E200A41AA7 /* LoggerClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D63C533016F773E200A41AA7 /* LoggerClient.h */; };
+		D63C533716F773E200A41AA7 /* NSLoggerClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D63C533116F773E200A41AA7 /* NSLoggerClient.h */; };
+		D63C533816F773E200A41AA7 /* NSLoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D63C533216F773E200A41AA7 /* NSLoggerClient.m */; };
+		D63C533C16F7742200A41AA7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D63C533B16F7742200A41AA7 /* SystemConfiguration.framework */; };
 		D64740D711FB84EA0035E3AD /* AddImageFrames.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C790EF11EC6F24002AB21C /* AddImageFrames.h */; };
 		D64740D811FB84EA0035E3AD /* Components_macosx.k.h in Headers */ = {isa = PBXBuildFile; fileRef = F539BA8202B950BE01CB1899 /* Components_macosx.k.h */; };
 		D64740D911FB84EA0035E3AD /* IMGFrameFromJPGS.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C7914311EC73CA002AB21C /* IMGFrameFromJPGS.h */; };
@@ -93,7 +98,6 @@
 		D6692BD51648277B00119830 /* QI2M.icns in Resources */ = {isa = PBXBuildFile; fileRef = D6CE3C20133EB57F008085C5 /* QI2M.icns */; };
 		D6692BD71648277B00119830 /* QTImage2Mov.c in Sources */ = {isa = PBXBuildFile; fileRef = F50182810255213601004445 /* QTImage2Mov.c */; };
 		D6692BD81648277B00119830 /* ProgressDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C87E9412E5C96D0011AFBB /* ProgressDialog.m */; };
-		D6692BDA1648277B00119830 /* LogControllerL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67A1CDF134B9F3600073807 /* LogControllerL.framework */; };
 		D6692BDB1648277B00119830 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
 		D6692BDD1648277B00119830 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F501828C0255215801004445 /* QuickTime.framework */; };
 		D6692BDE1648277B00119830 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C87EA112E5CA5F0011AFBB /* Cocoa.framework */; };
@@ -101,7 +105,6 @@
 		D6692BE01648277B00119830 /* libavformat.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EB67C8163C82C200A80A5F /* libavformat.dylib */; };
 		D6692BE11648277B00119830 /* libavutil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EB67CA163C82C200A80A5F /* libavutil.dylib */; };
 		D6692BE31648277B00119830 /* QTImage2MovMachO.r in Rez */ = {isa = PBXBuildFile; fileRef = F50182860255213601004445 /* QTImage2MovMachO.r */; };
-		D6692BE51648277B00119830 /* LogControllerL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67A1CDF134B9F3600073807 /* LogControllerL.framework */; };
 		D6692BEF1648279500119830 /* QTils.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C5888211F9C8B400E6080A /* QTils.h */; };
 		D6692BF01648279500119830 /* copyright.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C588D611F9CEA000E6080A /* copyright.h */; };
 		D6692BF31648279500119830 /* densehashtable.h in Headers */ = {isa = PBXBuildFile; fileRef = D604374F1292A2A0002FD822 /* densehashtable.h */; };
@@ -115,8 +118,6 @@
 		D6692BFD1648279500119830 /* QTils.c in Sources */ = {isa = PBXBuildFile; fileRef = D6C5888311F9C8B400E6080A /* QTils.c */; };
 		D6692BFE1648279500119830 /* QTImage2Mov-direct.c in Sources */ = {isa = PBXBuildFile; fileRef = D66B26BD11F86C1100E8AE78 /* QTImage2Mov-direct.c */; };
 		D6692C0A1648284000119830 /* libImage2Mov+laf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6692C071648279500119830 /* libImage2Mov+laf.a */; };
-		D67A1CE8134BA01800073807 /* LogControllerL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67A1CDF134B9F3600073807 /* LogControllerL.framework */; };
-		D67A1CE9134BA01F00073807 /* LogControllerL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67A1CDF134B9F3600073807 /* LogControllerL.framework */; };
 		D686F6F212660F6E00E401EE /* QTImage2Mov.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D686F6F112660F6E00E401EE /* QTImage2Mov.rtf */; };
 		D6C5888411F9C8B400E6080A /* QTils.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C5888211F9C8B400E6080A /* QTils.h */; };
 		D6C5888511F9C8B400E6080A /* QTils.c in Sources */ = {isa = PBXBuildFile; fileRef = D6C5888311F9C8B400E6080A /* QTils.c */; };
@@ -130,13 +131,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D6169DD5134D0A15004A2A56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6169D1A134D021D004A2A56;
-			remoteInfo = LogController_framework;
-		};
 		D647410D11FB88470035E3AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
@@ -158,13 +152,6 @@
 			remoteGlobalIDString = D65DBC7A11FC59F100B3CD0B;
 			remoteInfo = TouchRez;
 		};
-		D6692BC11648277B00119830 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D67A1CCE134B9F3600073807;
-			remoteInfo = LogController_loader;
-		};
 		D6692C081648280E00119830 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
@@ -179,48 +166,6 @@
 			remoteGlobalIDString = D6768F22131FB969006D40B4;
 			remoteInfo = DocSet;
 		};
-		D67A1C4B134B96AD00073807 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = LogController;
-		};
-		D67A1CDE134B9F3600073807 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D67A1CDB134B9F3600073807;
-			remoteInfo = "LogController copy";
-		};
-		D67A1CE2134B9F9800073807 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D67A1CCE134B9F3600073807;
-			remoteInfo = LogController_loader;
-		};
-		D696D7421414D00800E2F416 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D696D5761414C06700E2F416;
-			remoteInfo = LogControllerGC_framework;
-		};
-		D6C929D614167366006F363A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D67AD130141624B100E99EA2;
-			remoteInfo = "pipeLogger-emb";
-		};
-		D6D6C204134C8DC300E43CC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D6D6C048134C5F1C00E43CC5;
-			remoteInfo = pipeLogger;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -230,7 +175,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D6692BE51648277B00119830 /* LogControllerL.framework in Frameworks */,
 			);
 			name = Frameworks;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +185,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D67A1CE9134BA01F00073807 /* LogControllerL.framework in Frameworks */,
 			);
 			name = Frameworks;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +214,13 @@
 		D627F8821296E8E8001B1E94 /* qtvoutplayer.c */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = sourcecode.c.c; lineEnding = 2; name = qtvoutplayer.c; path = ../../../MSWin/qtvoutplayer/src/qtvoutplayer.c; sourceTree = SOURCE_ROOT; };
 		D627F8831296E8E8001B1E94 /* qtime.h */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = sourcecode.c.h; lineEnding = 2; name = qtime.h; path = ../../../MSWin/qtvoutplayer/src/qtime.h; sourceTree = SOURCE_ROOT; };
 		D627F8841296E8E8001B1E94 /* qtime.c */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = sourcecode.c.c; lineEnding = 2; name = qtime.c; path = ../../../MSWin/qtvoutplayer/src/qtime.c; sourceTree = SOURCE_ROOT; };
-		D633F4AB1693667000203C5E /* PCLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PCLogController.h; path = "../../GNUStep-PC-LogController/PCLogController.h"; sourceTree = SOURCE_ROOT; };
+		D63C532D16F773E200A41AA7 /* NSLogger-LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "NSLogger-LICENSE.txt"; path = "../source/NSLogger-LICENSE.txt"; sourceTree = SOURCE_ROOT; };
+		D63C532E16F773E200A41AA7 /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = ../source/LoggerCommon.h; sourceTree = SOURCE_ROOT; };
+		D63C532F16F773E200A41AA7 /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggerClient.m; path = ../source/LoggerClient.m; sourceTree = SOURCE_ROOT; };
+		D63C533016F773E200A41AA7 /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerClient.h; path = ../source/LoggerClient.h; sourceTree = SOURCE_ROOT; };
+		D63C533116F773E200A41AA7 /* NSLoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSLoggerClient.h; path = ../source/NSLoggerClient.h; sourceTree = SOURCE_ROOT; };
+		D63C533216F773E200A41AA7 /* NSLoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSLoggerClient.m; path = ../source/NSLoggerClient.m; sourceTree = SOURCE_ROOT; };
+		D63C533B16F7742200A41AA7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D63D6533144076A80039FC0C /* QTImage2Mov-v1.1.pages */ = {isa = PBXFileReference; lastKnownFileType = file; name = "QTImage2Mov-v1.1.pages"; path = "../QTImage2Mov-v1.1.pages"; sourceTree = SOURCE_ROOT; };
 		D644ABC311FFA0820097BA7E /* TODOHIST.txt */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = text; lineEnding = 2; name = TODOHIST.txt; path = ../TODOHIST.txt; sourceTree = SOURCE_ROOT; wrapsLines = 1; };
 		D647408A11FB7F7F0035E3AD /* QTImage2Mov-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QTImage2Mov-Info.plist"; sourceTree = "<group>"; };
@@ -283,7 +232,6 @@
 		D6692C071648279500119830 /* libImage2Mov+laf.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libImage2Mov+laf.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66B265B11F84CCD00E8AE78 /* QTImage2Mov.def */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = text; lineEnding = 2; name = QTImage2Mov.def; path = ../QTImage2Mov.def; sourceTree = SOURCE_ROOT; };
 		D66B26BD11F86C1100E8AE78 /* QTImage2Mov-direct.c */ = {isa = PBXFileReference; fileEncoding = 12; lastKnownFileType = sourcecode.c.c; name = "QTImage2Mov-direct.c"; path = "../source/QTImage2Mov-direct.c"; sourceTree = SOURCE_ROOT; };
-		D67A1C44134B96AD00073807 /* LogController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LogController.xcodeproj; path = "../../GNUStep-PC-LogController/LogController.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		D686F6F112660F6E00E401EE /* QTImage2Mov.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = QTImage2Mov.rtf; path = ../QTImage2Mov.rtf; sourceTree = SOURCE_ROOT; wrapsLines = 1; };
 		D6870462166BA23300300B8D /* win32popen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = win32popen.c; path = ../../brigade/win32popen.c; sourceTree = SOURCE_ROOT; };
 		D687046D166BA27300300B8D /* win32popen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = win32popen.h; path = ../../brigade/win32popen.h; sourceTree = SOURCE_ROOT; };
@@ -332,11 +280,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67A1CE8134BA01800073807 /* LogControllerL.framework in Frameworks */,
 				D64740E711FB84EA0035E3AD /* Carbon.framework in Frameworks */,
 				D64740E811FB84EA0035E3AD /* libImage2Mov.a in Frameworks */,
 				D64740E911FB84EA0035E3AD /* QuickTime.framework in Frameworks */,
 				D6C87EA212E5CA5F0011AFBB /* Cocoa.framework in Frameworks */,
+				D63C533C16F7742200A41AA7 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +299,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6692BDA1648277B00119830 /* LogControllerL.framework in Frameworks */,
 				D6692BDB1648277B00119830 /* Carbon.framework in Frameworks */,
 				D6692BDD1648277B00119830 /* QuickTime.framework in Frameworks */,
 				D6692BDE1648277B00119830 /* Cocoa.framework in Frameworks */,
@@ -375,7 +322,6 @@
 		089C166AFE841209C02AAC07 /* SlideShowImporterPB */ = {
 			isa = PBXGroup;
 			children = (
-				D67A1C44134B96AD00073807 /* LogController.xcodeproj */,
 				D6EC1E3612EF281800B53DBC /* BugReports.txt */,
 				D644ABC311FFA0820097BA7E /* TODOHIST.txt */,
 				D686F6F112660F6E00E401EE /* QTImage2Mov.rtf */,
@@ -386,6 +332,7 @@
 				D6C15C421253A90B00155E17 /* Win32Stuff */,
 				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
 				19C28FB4FE9D528D11CA2CBB /* Products */,
+				D63C533B16F7742200A41AA7 /* SystemConfiguration.framework */,
 			);
 			name = SlideShowImporterPB;
 			sourceTree = "<group>";
@@ -426,6 +373,7 @@
 		08FB77ADFE841716C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D63C532C16F773E200A41AA7 /* Logging */,
 				D6A36724123790780091D27C /* scratch.c */,
 				D61B36C911D90C0B00661731 /* timing.c */,
 				F50182810255213601004445 /* QTImage2Mov.c */,
@@ -488,17 +436,17 @@
 			name = playbackCode;
 			sourceTree = "<group>";
 		};
-		D67A1C45134B96AD00073807 /* Products */ = {
+		D63C532C16F773E200A41AA7 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
-				D67A1C4C134B96AD00073807 /* LogController.framework */,
-				D67A1CDF134B9F3600073807 /* LogControllerL.framework */,
-				D6169DD6134D0A15004A2A56 /* LogControllerFW.framework */,
-				D6D6C205134C8DC300E43CC5 /* pipeLogger */,
-				D696D7431414D00800E2F416 /* LogControllerGCFW.framework */,
-				D6C929D714167366006F363A /* pipeLogger-emb.app */,
+				D63C532D16F773E200A41AA7 /* NSLogger-LICENSE.txt */,
+				D63C532E16F773E200A41AA7 /* LoggerCommon.h */,
+				D63C532F16F773E200A41AA7 /* LoggerClient.m */,
+				D63C533016F773E200A41AA7 /* LoggerClient.h */,
+				D63C533116F773E200A41AA7 /* NSLoggerClient.h */,
+				D63C533216F773E200A41AA7 /* NSLoggerClient.m */,
 			);
-			name = Products;
+			name = Logging;
 			sourceTree = "<group>";
 		};
 		D6C15C421253A90B00155E17 /* Win32Stuff */ = {
@@ -528,7 +476,6 @@
 		D6DE77E011DE122900EC9721 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				D633F4AB1693667000203C5E /* PCLogController.h */,
 				D60437491292A2A0002FD822 /* google */,
 				D6C588D611F9CEA000E6080A /* copyright.h */,
 				D61B36C811D90C0B00661731 /* timing.h */,
@@ -577,7 +524,9 @@
 				D64740E111FB84EA0035E3AD /* timing.h in Headers */,
 				D64740E211FB84EA0035E3AD /* winixdefs.h in Headers */,
 				D6C87E9512E5C96D0011AFBB /* ProgressDialog.h in Headers */,
-				D633F4AC1693667000203C5E /* PCLogController.h in Headers */,
+				D63C533416F773E200A41AA7 /* LoggerCommon.h in Headers */,
+				D63C533616F773E200A41AA7 /* LoggerClient.h in Headers */,
+				D63C533716F773E200A41AA7 /* NSLoggerClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +541,6 @@
 				D60437571292A2A0002FD822 /* sparseconfig.h in Headers */,
 				D60437581292A2A0002FD822 /* sparsehashtable.h in Headers */,
 				D60437591292A2A0002FD822 /* type_traits.h in Headers */,
-				D633F4AD1693667000203C5E /* PCLogController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +598,6 @@
 			dependencies = (
 				D65DBC7C11FC59FC00B3CD0B /* PBXTargetDependency */,
 				D647410E11FB88470035E3AD /* PBXTargetDependency */,
-				D67A1CE3134B9F9800073807 /* PBXTargetDependency */,
 			);
 			name = QTImage2MovComp;
 			productInstallPath = "$(USER_LIBRARY_DIR)/Bundles";
@@ -691,7 +638,6 @@
 			);
 			dependencies = (
 				D6692BBC1648277B00119830 /* PBXTargetDependency */,
-				D6692BC01648277B00119830 /* PBXTargetDependency */,
 				D6692C091648280E00119830 /* PBXTargetDependency */,
 			);
 			name = "QTImage2MovComp libavf";
@@ -737,12 +683,6 @@
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* SlideShowImporterPB */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D67A1C45134B96AD00073807 /* Products */;
-					ProjectRef = D67A1C44134B96AD00073807 /* LogController.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D64740D511FB84EA0035E3AD /* QTImage2MovComp */,
@@ -756,51 +696,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		D6169DD6134D0A15004A2A56 /* LogControllerFW.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LogControllerFW.framework;
-			remoteRef = D6169DD5134D0A15004A2A56 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D67A1C4C134B96AD00073807 /* LogController.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LogController.framework;
-			remoteRef = D67A1C4B134B96AD00073807 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D67A1CDF134B9F3600073807 /* LogControllerL.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LogControllerL.framework;
-			remoteRef = D67A1CDE134B9F3600073807 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D696D7431414D00800E2F416 /* LogControllerGCFW.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = LogControllerGCFW.framework;
-			remoteRef = D696D7421414D00800E2F416 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D6C929D714167366006F363A /* pipeLogger-emb.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "pipeLogger-emb.app";
-			remoteRef = D6C929D614167366006F363A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D6D6C205134C8DC300E43CC5 /* pipeLogger */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = pipeLogger;
-			remoteRef = D6D6C204134C8DC300E43CC5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		D64740E311FB84EA0035E3AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -811,6 +706,7 @@
 				D6C87E8F12E5C9000011AFBB /* ProgressDialog.nib in Resources */,
 				D6CE3C1E133EB548008085C5 /* PkgInfo in Resources */,
 				D6CE3C21133EB57F008085C5 /* QI2M.icns in Resources */,
+				D63C533316F773E200A41AA7 /* NSLogger-LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,6 +827,8 @@
 			files = (
 				D64740E511FB84EA0035E3AD /* QTImage2Mov.c in Sources */,
 				D6C87E9612E5C96D0011AFBB /* ProgressDialog.m in Sources */,
+				D63C533516F773E200A41AA7 /* LoggerClient.m in Sources */,
+				D63C533816F773E200A41AA7 /* NSLoggerClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,11 +883,6 @@
 			target = D65DBC7A11FC59F100B3CD0B /* TouchRez */;
 			targetProxy = D6692BBD1648277B00119830 /* PBXContainerItemProxy */;
 		};
-		D6692BC01648277B00119830 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LogController_loader;
-			targetProxy = D6692BC11648277B00119830 /* PBXContainerItemProxy */;
-		};
 		D6692C091648280E00119830 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D6692BED1648279500119830 /* Image2Mov libavf */;
@@ -999,11 +892,6 @@
 			isa = PBXTargetDependency;
 			target = D6768F22131FB969006D40B4 /* DocSet */;
 			targetProxy = D6768F26131FB999006D40B4 /* PBXContainerItemProxy */;
-		};
-		D67A1CE3134B9F9800073807 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LogController_loader;
-			targetProxy = D67A1CE2134B9F9800073807 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1038,8 +926,6 @@
 					DEBUG,
 					IMPORT_JPGS,
 					NO_FFMPEGLIBS_DEPEND,
-					_PC_LOG_ACTIVE,
-					_PC_LOG_EMBEDDED,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/../../GNUStep-PC-LogController";
@@ -1083,8 +969,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					IMPORT_JPGS,
 					NO_FFMPEGLIBS_DEPEND,
-					_PC_LOG_ACTIVE,
-					_PC_LOG_EMBEDDED,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = 4.2;
@@ -1134,8 +1018,6 @@
 					DEBUG,
 					IMPORT_JPGS,
 					NO_FFMPEGLIBS_DEPEND,
-					_PC_LOG_ACTIVE,
-					_PC_LOG_EMBEDDED,
 				);
 				GCC_UNROLL_LOOPS = NO;
 				HEADER_SEARCH_PATHS = "";
@@ -1167,8 +1049,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					IMPORT_JPGS,
 					NO_FFMPEGLIBS_DEPEND,
-					_PC_LOG_ACTIVE,
-					_PC_LOG_EMBEDDED,
 				);
 				GCC_UNROLL_LOOPS = YES;
 				HEADER_SEARCH_PATHS = "";

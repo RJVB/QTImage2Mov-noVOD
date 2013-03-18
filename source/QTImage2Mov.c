@@ -194,7 +194,7 @@ ComponentCall(GetLoadState)
 char *concat(const char *first, ...)
 { va_list ap;
   int n= 0, tlen= 0;
-  char *c= first, *buf= NULL;
+  char *c= (char*) first, *buf= NULL;
 	va_start(ap, first);
 	do{
 		tlen+= strlen(c)+ 1;
@@ -206,7 +206,7 @@ char *concat(const char *first, ...)
 		return( NULL );
 	}
 	if( (buf= calloc( tlen, sizeof(char) )) ){
-		c= first;
+		c= (char*) first;
 		va_start(ap, first);
 		do{
 			strcat( buf, c);
@@ -302,6 +302,8 @@ pascal ComponentResult QTImage2MovImport_Open(QTImage2MovGlobals store, Componen
 //		qtLogPtr = Initialise_Log( "QT QI2MSource Importer Log", ProgName() );
 //		qtLog_Initialised = 1;
 //	}
+#else
+	SwitchCocoaToMultiThreadedMode();
 #endif
 
 	// Allocate and initialise all globals to 0 by calling NewPtrClear.
@@ -318,12 +320,19 @@ bail:
 #if defined(_WINDOWS) || defined(WIN32) || defined(_MSC_VER)
 	   qtLog_Initialised
 #else
+#	ifdef _PC_LOG_ACTIVE
 	   PCLogActive()
+#	else
+	   1
+#	endif
 #endif
 	){
 		Log( qtLogPtr, "QTImage2MovImport_Open(%p) -- initialised; store=0x%lx err=%d\n",
 		    self, (unsigned long) store, (int) err
 		);
+#ifdef _NSLOGGERCLIENT_H
+		NSLogFlushLog();
+#endif
 	}
 	return err;
 }
@@ -344,7 +353,11 @@ pascal ComponentResult QTImage2MovImport_Close(QTImage2MovGlobals store, Compone
 #if defined(_WINDOWS) || defined(WIN32) || defined(_MSC_VER)
 	   qtLog_Initialised
 #else
+#	ifdef _PC_LOG_ACTIVE
 	   PCLogActive()
+#	else
+	   1
+#	endif
 #endif
 	){
 		Log( qtLogPtr, "QTImage2MovImport_Close(%p) -- closing down; disposing of store 0x%lx\n",
@@ -2353,6 +2366,9 @@ bail:
 		lastErrorFile = strdup(theElement->image.theURL);
 		lastError = err;
 	}
+#endif
+#ifdef _NSLOGGERCLIENT_H
+	NSLogFlushLog();
 #endif
 	return err;
 }
